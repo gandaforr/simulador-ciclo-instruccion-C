@@ -4,7 +4,9 @@
 ![Architecture](https://img.shields.io/badge/Architecture-Von_Neumann_%2F_IAS-orange.svg)
 ![Status](https://img.shields.io/badge/Status-Completed-brightgreen.svg)
 
-Simulador de bajo nivel escrito en **C** que emula el funcionamiento interno de la **Unidad Central de Procesamiento (CPU)** y el **Ciclo de Instrucciones** (Fetch-Decode-Execute) trabajando con direcciones y datos en formato **hexadecimal**.
+El objetivo de este proyecto es modelar los componentes fundamentales de un computador a nivel de transferencia de registros (RTL) y demostrar cómo interactúan la **Unidad de Control**, la **Unidad Aritmético Lógica (ALU)** y la **Memoria RAM** durante la ejecución de un programa en lenguaje máquina.
+
+El sistema implementa una arquitectura modular donde el módulo `lectura.h` se encarga del **procesamiento y parseo de un archivo de texto externo (`.txt`)** que contiene el programa en instrucciones hexadecimales. Estas instrucciones se cargan dinámicamente en la memoria RAM antes de iniciar el ciclo continuo de ejecución (`Fetch-Decode-Execute`) hasta encontrar la instrucción de paro (`HTL`).
 
 ---
 

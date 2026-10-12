@@ -40,7 +40,7 @@ struct ALU{
 
 
 //set
-// Función para establecer el valor
+// FunciÃ³n para establecer el valor
 void setHexValue(int *num, unsigned int newValue);
 void imprimirTabla();
 //void getHexValue()
@@ -110,9 +110,9 @@ int main(){
 
 
 
-// Función para establecer el valor
+// FunciÃ³n para establecer el valor
 void setHexValue(int *num, int newValue) {
-    // Verificar que el nuevo valor esté dentro del rango de números hexadecimales permitidos
+    // Verificar que el nuevo valor estÃ© dentro del rango de nÃºmeros hexadecimales permitidos
     if (newValue <= 0xFF) {  // Por ejemplo, permitir solo valores de 0x00 a 0xFF
         *num = newValue;  // Asignar el nuevo valor usando desreferencia
     } else {
@@ -167,18 +167,18 @@ void mul(int *n){
 	unsigned char a = (unsigned char)alu.MQ;
     unsigned char b = (unsigned char)*n;  	
 	
-	 // Multiplicación completa (el resultado puede ser de hasta 16 bits)
+	 // MultiplicaciÃ³n completa (el resultado puede ser de hasta 16 bits)
     unsigned int resultado = a * b;
 
     // Los 8 bits menos significativos (parte baja)
     unsigned char menos_significativos = resultado & 0xFF;
 
-    // Los 8 bits más significativos (parte alta)
+    // Los 8 bits mÃ¡s significativos (parte alta)
     unsigned char mas_significativos = (resultado >> 8) & 0xFF;
     
     //printf("Resultado completo: %X\n", resultado);
     //printf("Menos significativos: %X\n", menos_significativos);
-    //printf("Más significativos: %X\n", mas_significativos);
+    //printf("MÃ¡s significativos: %X\n", mas_significativos);
     
     int me = (int)menos_significativos;
     int ma = (int)mas_significativos;
@@ -263,7 +263,7 @@ void imprimirUnidadDeControl(struct Unidad_de_control uni) {
 		printf("Decodificador: HTL \n");
 	}
 	else {
-		printf("¡¡¡¡sin funcion!!!!!\n");
+		printf("Â¡Â¡Â¡Â¡sin funcion!!!!!\n");
 	}
 	
 }

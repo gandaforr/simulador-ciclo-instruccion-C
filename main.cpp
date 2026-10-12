@@ -6,13 +6,7 @@
 
 struct lectura l1; //la informacion se guarda aqui
 
-//ahora todo en hexadecimal
-// profe descrubi que todo los enteros son tambien considerados hexadecimales en c
-// haci que si en el codigo parece que es un entero no es un hexadecimal profe
-// estoy tratando todos los enteros como hexadecimales 0xFF
-// en el codigo solo voy a poner hexadecimal tambien profe [con excepciones
-
-
+//todo en hexadecimal
 
 // Componentes del simulador
 struct Unidad_de_control{
@@ -48,7 +42,7 @@ void imprimirTabla();
 // inicializar los componentes de la simulacion
 void cargar();
 
-//funciones parea el decodifi
+//funciones para el decodifi
 void add(int *);
 void LoadMX(int *);
 void LoadMQ(int *); 
@@ -102,8 +96,6 @@ int main(){
 	uni.decodifi(&mem.tabla_memoria[mem.direccion]);
 	imprimir_componentes(uni,mem,alu);
 	}
-	
-	
 	
 	return 0;
 }
@@ -175,11 +167,7 @@ void mul(int *n){
 
     // Los 8 bits más significativos (parte alta)
     unsigned char mas_significativos = (resultado >> 8) & 0xFF;
-    
-    //printf("Resultado completo: %X\n", resultado);
-    //printf("Menos significativos: %X\n", menos_significativos);
-    //printf("Más significativos: %X\n", mas_significativos);
-    
+        
     int me = (int)menos_significativos;
     int ma = (int)mas_significativos;
     
@@ -242,8 +230,6 @@ void imprimirUnidadDeControl(struct Unidad_de_control uni) {
     printf("Contador: %X\n", uni.contador);
     printf("Instruccion: %X\n", uni.instruccion);
 
-
-    //printf("Decodificador: %p\n", (void*)uni.decodifi);
     if(uni.decodifi == LoadMQ){
     	printf("Decodificador: LoadMQ \n");
 	}

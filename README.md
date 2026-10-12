@@ -37,12 +37,8 @@ El sistema implementa las estructuras fundamentales de la arquitectura **IAS / V
 ## 🔄 El Ciclo de Instrucciones (Fetch - Decode - Execute)
 
 El bucle principal (`while(EnMarcha)`) emula rigurosamente las etapas del ciclo de máquina:
-┌─────────────┐       ┌─────────────┐       ┌─────────────┐
-│    FETCH    │  ──►  │   DECODE    │  ──►  │   EXECUTE   │
-│ (Búsqueda)  │       │(Decodificación)     │ (Ejecución) │
-└─────────────┘       └─────────────┘       └─────────────┘
-       ▲                                           │
-       └───────────────────────────────────────────┘
+<img width="1518" height="385" alt="image" src="https://github.com/user-attachments/assets/435b4f64-012d-4d17-b352-9293ad655288" />
+
 
 1. **Fetch (Búsqueda):** Se obtiene la instrucción de la memoria mediante el puntero `contador` (PC) y se incrementa el contador de programa.
 2. **Decode (Decodificación):** Se extraen los 4 bits superiores (`Opcode`) y los 4 bits inferiores (`Operando`). La función `auxiliarDecodifi` vincula el puntero a función `decodifi` con la operación correspondiente.
